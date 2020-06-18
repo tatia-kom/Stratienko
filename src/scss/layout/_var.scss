@@ -1,0 +1,36 @@
+//fonts
+$font300: 'Gilroy Light';
+$font400: 'Gilroy Regular';
+$font500: 'Gilroy Medium';
+$font700: 'Gilroy Bold';
+
+//colors
+
+$gold: #BF926B;
+
+//media
+
+$lg: 1539px;
+$md: 1199px;
+$sm: 991px;
+$xs: 767px;
+
+// mixins
+
+@mixin placeholderColor($color) {
+  &::-moz-placeholder {
+    color: $color;
+  }
+  &::-webkit-input-placeholder {
+    color: $color;
+  }
+  &:-ms-input-placeholder {
+    color: $color;
+  }
+  &::-ms-input-placeholder {
+    color: $color;
+  }
+  &::placeholder {
+    color: $color;
+  }
+}

@@ -1,0 +1,42 @@
+doctype html
+html
+    head
+        meta(http-equiv="text/html" charset="utf-8")
+        meta(http-equiv="X-UA-Compatible" content="IE=edge")
+        meta(name="viewport" content="width=device-width, initial-scale=1")
+        title Контакты
+        link(rel="stylesheet" type="text/css" href="css/style.min.css")
+    body
+        div.main-bg.main-bg--about
+
+        div.main
+            include ../components/header.pug
+            +header(4)
+
+            section.contacts
+                div.container
+                    div.contacts__flex
+                        div.contacts__content
+                            h1.contacts__title Наши контакты
+
+                            p.contacts__label Наш телефон:
+                            a.contacts__item(href="tel:") +7 (495) 999-44-55
+
+                            p.contacts__label Наша почта:
+                            a.contacts__item(href="mailto:") mail@mail.ru
+
+                            p.contacts__label График работы:
+                            p.contacts__item с 8:00 до 20:00
+
+                        div.contacts__map#map
+                            img(src="img/map.jpg")
+
+                            div.contacts__form
+                                include ../components/form.pug
+
+            include ../components/footer.pug
+
+        script(src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.3/jquery.min.js")
+        script(src="js/inputmask.js")
+        script(src="js/jquery.inputmask.js")
+        script(type="text/javascript" src="js/scripts.js")

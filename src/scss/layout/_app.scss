@@ -1,0 +1,220 @@
+@import "layout/var";
+
+html, body {
+    position: relative;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: $font400, sans-serif;
+    margin: 0;
+    padding: 0;
+    position: relative;
+    height: 100%;
+    color: white;
+
+    &.frozen {
+        overflow: hidden;
+    }
+}
+
+p {
+    margin: 0;
+}
+
+h1,h2,h3,h4,h5,h6 {
+    margin: 0;
+    font-weight: normal;
+}
+header, footer, section, div, span, p, button, a, input, textarea, form {
+    box-sizing: border-box;
+}
+
+button,input,textarea,select{
+    outline: none;
+}
+button {
+    padding: 0;
+    border: 0;
+    background-color: transparent;
+    transition: 0.3s;
+}
+a {
+    text-decoration: none;
+    transition: 0.3s;
+    color: white;
+
+    &:hover {
+        color: $gold;
+    }
+}
+
+a:focus {
+    outline: none;
+}
+
+form {
+    margin: 0;
+}
+
+footer {
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    width: 1420px;
+    margin: 0 auto;
+
+    @media (max-width: $lg) {
+        width: 1140px;
+    }
+
+    @media (max-width: $md) {
+        width: 932px;
+    }
+
+    @media (max-width: $sm) {
+        width: 728px;
+    }
+
+    @media (max-width: $xs) {
+        width: calc(100% - 30px);
+        margin: 0 15px;
+    }
+}
+
+.main {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+.main-bg {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: url('../img/bg-index.jpg') no-repeat center;
+    background-size: cover;
+    z-index: 0;
+
+    &--about {
+        background-image: url('../img/bg-about.jpg');
+    }
+
+    &:before {
+        content: '';
+        display: block;
+        position: absolute;
+        left: 0;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        background: radial-gradient(32.19% 101.54% at 50% 43.39%, rgba(40, 49, 84, 0.83) 1.04%, rgba(34, 38, 52, 0.97) 100%);
+    }
+
+    &:after {
+        content: '';
+        display: block;
+        position: absolute;
+        left: 50px;
+        top: 0;
+        right: 50px;
+        bottom: 0;
+        background: url('../img/circles.svg') no-repeat center;
+        background-size: cover;
+    }
+}
+
+.button {
+    background: $gold;
+    box-shadow: 0px 10px 80px rgba(191, 146, 107, 0.6);
+    width: 275px;
+    height: 60px;
+    font-family: $font400;
+    font-size: 18px;
+    line-height: 21px;
+    color: white;
+    cursor: pointer;
+
+    @media (max-width: $xs) {
+        box-shadow: 0px 0px 10px rgba(191, 146, 107, 0.6);
+    }
+
+    &:hover {
+        background: white;
+        color: $gold;
+    }
+}
+
+.modal {
+    position: fixed;
+    z-index: 100;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    display: flex;
+    justify-content: center;
+    background: rgba(0, 0, 0, 0.6);
+    opacity: 0;
+    pointer-events: none;
+    overflow: auto;
+    transition: 0.3s;
+
+    &--opened {
+        opacity: 1;
+        pointer-events: auto;
+    }
+
+    &__content {
+        margin: auto;
+        position: relative;
+
+        @media (max-width: $xs) {
+            margin-top: 0;
+        }
+
+        &--thanks {
+            padding: 40px;
+            background: white;
+        }
+    }
+
+    &__close {
+        position: absolute;
+        top: 10px;
+        right: 10px;
+        cursor: pointer;
+        display: block;
+        width: 25px;
+        height: 25px;
+
+        &:before {
+            content: '';
+            display: block;
+            position: absolute;
+            top: 12px;
+            left: 0;
+            width: 24px;
+            height: 1px;
+            background: black;
+            transform: rotate(-45deg);
+        }
+
+        &:after {
+            content: '';
+            display: block;
+            position: absolute;
+            top: 12px;
+            left: 0;
+            width: 24px;
+            height: 1px;
+            background: black;
+            transform: rotate(45deg);
+        }
+    }
+}

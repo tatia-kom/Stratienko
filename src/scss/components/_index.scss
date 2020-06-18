@@ -1,0 +1,98 @@
+@import "layout/var";
+
+.index {
+  padding: 262px 0 87px;
+  position: relative;
+  z-index: 1;
+  max-width: 1021px;
+  margin: 0 auto;
+
+  @media (max-width: $lg) {
+    padding-top: 160px;
+  }
+
+  @media (max-width: $md) {
+    max-width: 932px;
+    padding: 100px 0 60px;
+  }
+
+  @media (max-width: $sm) {
+    max-width: 728px;
+  }
+
+  @media (max-width: $xs) {
+    max-width: calc(100% - 30px);
+    overflow: hidden;
+    padding: 20px 0;
+  }
+
+  &__title {
+    max-width: 992px;
+    text-align: center;
+    font-size: 36px;
+    line-height: 44px;
+    margin: 0 auto;
+
+    @media (max-width: $md) {
+      max-width: 932px;
+    }
+
+    @media (max-width: $xs) {
+      max-width: 100%;
+      font-size: 24px;
+      line-height: 30px;
+    }
+
+    strong {
+      color: $gold;
+      font-family: $font700;
+    }
+  }
+
+  &__text {
+    text-align: center;
+    max-width: 650px;
+    margin: 24px auto 0;
+    font-family: $font300;
+    font-size: 18px;
+    line-height: 21px;
+    opacity: 0.5;
+
+    @media (max-width: $xs) {
+      max-width: 100%;
+      margin-top: 20px;
+      font-size: 16px;
+      line-height: 19px;
+    }
+  }
+
+  &__button {
+    margin: 50px 0 0 50%;
+    transform: translateX(-50%);
+
+    @media (max-width: $xs) {
+      margin-top: 20px;
+    }
+  }
+
+  &__bottom {
+    text-align: center;
+    font-family: $font300;
+    font-size: 13px;
+    line-height: 15px;
+    opacity: 0.5;
+    margin-top: 51px;
+
+    @media (max-width: $xs) {
+      margin-top: 30px;
+    }
+
+    p {
+      margin-bottom: 15px;
+
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
+  }
+}

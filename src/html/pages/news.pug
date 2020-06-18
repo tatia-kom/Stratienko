@@ -1,0 +1,60 @@
+doctype html
+html
+    head
+        meta(http-equiv="text/html" charset="utf-8")
+        meta(http-equiv="X-UA-Compatible" content="IE=edge")
+        meta(name="viewport" content="width=device-width, initial-scale=1")
+        title Материалы
+        link(rel="stylesheet" type="text/css" href="css/style.min.css")
+    body
+        div.main-bg
+
+        div.main
+            include ../components/header.pug
+            +header(3)
+
+            form.news-form
+                input.news-form__input(type="text" placeholder="Поиск информации")
+                button.button.news-form__button Найти
+
+            div.news
+                div.container
+                    div.news__flex
+                        div.news__item
+                            div.news__image-wrap
+                                div.news__image(style="background-image: url(img/news.jpg)")
+                            div.news__content
+                                p.news__title 3 наиболее важных решения ВС РФ по субсидиарной ответственности в 2020 году
+                                p.news__description Сайт рыбатекст поможет дизайнеру, верстальщику, вебмастеру сгенерировать несколько абзацев более менее осмысленного текста рыбы на русском языке, а начинающему оратору отточить ...
+
+                                div.news__bottom
+                                    span.news__date 19/03/2020
+                                    button.button Подробнее
+
+                        div.news__item
+                            div.news__image-wrap
+                                div.news__image(style="background-image: url(img/news.jpg)")
+                            div.news__content
+                                p.news__title 3 наиболее важных решения ВС РФ по субсидиарной ответственности в 2020 году
+                                p.news__description Сайт рыбатекст поможет дизайнеру, верстальщику, вебмастеру сгенерировать несколько абзацев более менее осмысленного текста рыбы на русском языке, а начинающему оратору отточить ...
+
+                                div.news__bottom
+                                    span.news__date 19/03/2020
+                                    button.button Подробнее
+
+                    div.news-pages
+                        a.news-pages__link.news-pages__link--active(href="#") 1
+                        a.news-pages__link(href="#") 2
+                        a.news-pages__link(href="#") 3
+                        a.news-pages__link(href="#") 4
+                        span.news-pages__more ...
+
+                        a.news-pages__arrow.news-pages__arrow--prev
+                        a.news-pages__arrow.news-pages__arrow--next
+
+            include ../components/footer.pug
+
+        script(src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.3/jquery.min.js")
+        script(src="js/inputmask.js")
+        script(src="js/jquery.inputmask.js")
+        script(type="text/javascript" src="js/scripts.js")

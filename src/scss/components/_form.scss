@@ -1,0 +1,110 @@
+@import "layout/var";
+
+.form {
+  box-shadow: 0px 10px 40px rgba(0, 0, 0, 0.1);
+  background: white;
+  padding: 32px;
+  width: 363px;
+
+  @media (max-width: $xs) {
+    width: 100%;
+    padding: 15px;
+  }
+
+  &__title {
+    color: black;
+    font-size: 24px;
+    line-height: 28px;
+    text-align: center;
+    margin: 8px 0 25px;
+
+    strong {
+      font-family: $font700;
+      font-weight: normal;
+    }
+  }
+
+  &__input {
+    margin-top: 15px;
+    width: 100%;
+    font-family: $font300;
+    font-size: 14px;
+    line-height: 16px;
+    color: black;
+    padding: 9px 2px;
+    border: 0;
+    border-bottom: 1px solid #E8E8E8;
+    transition: 0.3s;
+
+    @include placeholderColor(#606060);
+
+    &:hover, &:active, &:focus {
+      border-color: #606060;
+    }
+  }
+
+  &__textarea {
+    margin-top: 24px;
+    width: 100%;
+    height: 137px;
+    resize: none;
+    font-family: $font300;
+    font-size: 12px;
+    line-height: 14px;
+    padding: 12px;
+    border: 1px solid #E5E5E5;
+    transition: 0.3s;
+
+    @include placeholderColor(#606060);
+
+    &:hover, &:active, &:focus {
+      border-color: #606060;
+    }
+  }
+
+  &__file {
+    margin-top: 10px;
+
+    input {
+      position: absolute;
+      opacity: 0;
+      cursor: pointer;
+
+      &:hover + span {
+        text-decoration: none;
+      }
+    }
+
+    span {
+      font-size: 12px;
+      line-height: 14px;
+      text-decoration: underline;
+      color: $gold;
+      position: relative;
+      pointer-events: none;
+    }
+  }
+
+  &__button {
+    margin-top: 32px;
+    width: 100%;
+  }
+
+  &__note {
+    text-align: center;
+    font-family: $font300;
+    font-size: 14px;
+    line-height: 19px;
+    color: #4C4C4C;
+    margin-top: 24px;
+
+    a {
+      text-decoration: underline;
+      color: inherit;
+
+      &:hover {
+        text-decoration: none;
+      }
+    }
+  }
+}

@@ -1,0 +1,39 @@
+@import "layout/var";
+
+.footer {
+  display: flex;
+  justify-content: center;
+  position: relative;
+  margin-bottom: 33px;
+  margin-top: auto;
+  z-index: 1;
+
+  @media (max-width: $xs) {
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 20px;
+  }
+
+  &__link {
+    font-family: $font300;
+    font-size: 14px;
+    line-height: 16px;
+    color: $gold;
+    margin: 0 40px;
+
+    @media (max-width: $sm) {
+      margin: 0 20px;
+      font-size: 13px;
+    }
+
+    @media (max-width: $xs) {
+      text-align: center;
+      font-size: 14px;
+      margin: 10px 15px;
+    }
+
+    &:hover {
+      color: white;
+    }
+  }
+}

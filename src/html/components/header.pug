@@ -1,0 +1,38 @@
+mixin header(activeLink)
+
+    header.header
+        div.container
+            div.header__flex
+                div.socials
+                    a.socials__item(href="#")
+                        img(src="img/insta.svg")
+                    a.socials__item(href="#")
+                        img(src="img/tg.svg")
+
+                a.header__logo(href="index.html") Stratienko
+
+                button.header__mobile-menu
+                    span
+                    span
+                    span
+
+                div.header__right
+                    a.header__phone(href="tel:") +7 (495) 999-44-55
+
+            nav.menu
+                if activeLink == 1
+                    a.menu__link.menu__link--active(href="about.html") Обо мне
+                else
+                    a.menu__link(href="about.html") Обо мне
+                if activeLink == 2
+                    a.menu__link.menu__link--active(href="services.html") Услуги
+                else
+                    a.menu__link(href="services.html") Услуги
+                if activeLink == 3
+                    a.menu__link.menu__link--active(href="news.html") Материалы
+                else
+                    a.menu__link(href="news.html") Материалы
+                if activeLink == 4
+                    a.menu__link.menu__link--active(href="contacts.html") Контакты
+                else
+                    a.menu__link(href="contacts.html") Контакты

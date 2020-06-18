@@ -1,0 +1,33 @@
+doctype html
+html
+    head
+        meta(http-equiv="text/html" charset="utf-8")
+        meta(http-equiv="X-UA-Compatible" content="IE=edge")
+        meta(name="viewport" content="width=device-width, initial-scale=1")
+        title Главная
+        link(rel="stylesheet" type="text/css" href="css/style.min.css")
+    body
+        div.main-bg
+
+        div.main
+            include ../components/header.pug
+            +header()
+
+            section.index
+                h1.index__title <strong>Ведение судебных споров</strong>, текущая правовая поддержка и сопровождение комплексных проектов
+                p.index__text Поможем Вам решить большинствопроблем и вопросов, связанных с толкованием и применением законодательства РФ ***
+                button.button.index__button.open-modal Оставить заявку
+
+                div.index__bottom
+                    p Содержание данного информационного ресурса (сайт wwwstratienko.legal), включая любую информацию и результаты интеллектуальной деятельности, защищены законодательством Российской Федерации и международными соглашениями. Любое использование, копирование, воспроизведение или распространение любой размещенной информации, материалов и (или) их частей не допускается без предварительного получения согласия правообладателя и влечет применение мер ответственности.
+                    p Тексты, комментарии, статьи и иные информационные материалы, размещенные на сайте www.stratienko.legal, отражают личное мнение адвоката Стратиенко А.Н.
+                    p Сведения и материалы, размещенные на сайте www.stratienko.legal, подготовлены исключительно в информационных целях и не являются юридической консультацией или заключением.<br>Адвокат Стратиенко А.Н. не может гарантировать актуальность и применимость для Вас размещенной информации и не несет ответственности за принятые Вами решения и их последствия, возможные прямые или косвенные убытки, возникшие в результате использования информации или какой-либо ее части, размещенной на настоящем Сайте.
+
+            include ../components/footer.pug
+
+        include ../components/modal.pug
+
+        script(src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.3/jquery.min.js")
+        script(src="js/inputmask.js")
+        script(src="js/jquery.inputmask.js")
+        script(type="text/javascript" src="js/scripts.js")

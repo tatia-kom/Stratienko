@@ -1,0 +1,239 @@
+@import "layout/var";
+
+.news {
+  position: relative;
+  z-index: 1;
+
+  &__flex {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 58px;
+
+    @media (max-width: $sm) {
+      margin-bottom: 40px;
+    }
+
+    @media (max-width: $xs) {
+      margin-bottom: 20px;
+      flex-direction: column;
+    }
+  }
+
+  &__item {
+    margin-top: 65px;
+    width: calc(50% - 13px);
+    box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.25);
+
+    @media (max-width: $sm) {
+      margin-top: 30px;
+    }
+
+    @media (max-width: $xs) {
+      width: 100%;
+      margin-top: 20px;
+    }
+  }
+
+  &__image-wrap {
+    width: 100%;
+    overflow: hidden;
+    position: relative;
+
+    &:before {
+      content: '';
+      display: block;
+      padding-top: 31%;
+    }
+  }
+
+  &__image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    background: center center no-repeat;
+    background-size: cover;
+  }
+
+  &__content {
+    background: #333645 url('../img/block-bg.png') repeat;
+    padding: 41px 40px;
+
+    @media (max-width: $md) {
+      padding: 20px;
+    }
+  }
+
+  &__title {
+    font-size: 24px;
+    line-height: 28px;
+
+    @media (max-width: $sm) {
+      font-size: 20px;
+      line-height: 24px;
+    }
+  }
+
+  &__description {
+    margin-top: 24px;
+    font-size: 16px;
+    line-height: 19px;
+    color: rgba(255, 255, 255, 0.5);
+  }
+
+  &__bottom {
+    margin-top: 24px;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+
+    @media (max-width: $xs) {
+      flex-direction: column;
+    }
+  }
+
+  &__date {
+    margin-top: 8px;
+    font-size: 16px;
+    line-height: 19px;
+  }
+
+  .button {
+    @media (max-width: $sm) {
+      width: 200px;
+    }
+
+    @media (max-width: $xs) {
+      margin-left: auto;
+      margin-top: 15px;
+    }
+  }
+}
+
+.news-form {
+  position: relative;
+  z-index: 1;
+  padding-top: 65px;
+  width: 893px;
+  margin: 0 auto;
+  display: flex;
+
+  @media (max-width: $sm) {
+    width: 728px;
+    padding-top: 30px;
+  }
+
+  @media (max-width: $xs) {
+    width: calc(100% - 30px);
+    flex-direction: column;
+    padding-top: 20px;
+  }
+
+  &__input {
+    flex-grow: 1;
+    height: 40px;
+    border: 1px solid $gold;
+    margin: 0;
+    background: rgba(196, 196, 196, 0.2);
+    color: $gold;
+    font-family: $font400;
+    font-size: 14px;
+    line-height: 16px;
+    padding: 12px;
+
+    @include placeholderColor($gold);
+  }
+
+  &__button {
+    width: 225px;
+    height: 40px;
+    flex-shrink: 0;
+
+    @media (max-width: $xs) {
+      width: auto;
+    }
+  }
+}
+
+.news-pages {
+  height: 40px;
+  margin-bottom: 84px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+
+  @media (max-width: $md) {
+    margin-bottom: 40px;
+  }
+
+  @media (max-width: $xs) {
+    margin-bottom: 60px;
+  }
+
+  &__link {
+    font-size: 24px;
+    line-height: 28px;
+    text-decoration: underline;
+    margin: 0 8px;
+
+    &--active {
+      color: $gold;
+    }
+  }
+
+  &__more {
+    font-size: 24px;
+    line-height: 28px;
+    text-decoration: underline;
+    margin: 0 15px;
+  }
+
+  &__arrow {
+    position: absolute;
+    top: 0;
+    right: 0;
+    display: block;
+    width: 40px;
+    height: 40px;
+    border: 1px solid $gold;
+    cursor: pointer;
+
+    @media (max-width: $xs) {
+      top: 50px;
+    }
+
+    &:before {
+      content: '';
+      display: block;
+      position: absolute;
+      width: 18px;
+      height: 18px;
+      background: url('../img/arrow.svg');
+      top: 10px;
+      left: 10px;
+      opacity: 0.4;
+      transition: 0.3s;
+    }
+
+    &:hover {
+      background: $gold;
+
+      &:before {
+        opacity: 1;
+      }
+    }
+
+    &--prev {
+      right: 40px;
+      border-right: 0;
+    }
+
+    &--next {
+      &:before {
+        transform: scale(-1, 1);
+      }
+    }
+  }
+}
