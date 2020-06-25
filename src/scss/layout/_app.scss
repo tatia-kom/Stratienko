@@ -139,6 +139,9 @@ footer {
     line-height: 21px;
     color: white;
     cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 
     @media (max-width: $xs) {
         box-shadow: 0px 0px 10px rgba(191, 146, 107, 0.6);

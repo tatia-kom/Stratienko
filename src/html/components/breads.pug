@@ -1,0 +1,9 @@
+mixin breads(cat, item)
+
+    div.breads
+        div.container.breads__wrap
+            a.breads__item(href="index.html") Главная
+            if cat
+                a.breads__item(href="#") #{cat}
+            if item
+                span.breads__item #{item}

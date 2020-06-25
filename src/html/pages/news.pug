@@ -13,6 +13,9 @@ html
             include ../components/header.pug
             +header(3)
 
+            include ../components/breads.pug
+            +breads(null, 'Материалы')
+
             form.news-form
                 input.news-form__input(type="text" placeholder="Поиск информации")
                 button.button.news-form__button Найти
@@ -29,7 +32,7 @@ html
 
                                 div.news__bottom
                                     span.news__date 19/03/2020
-                                    button.button Подробнее
+                                    a.button(href="service-item.html") Подробнее
 
                         div.news__item
                             div.news__image-wrap
@@ -40,7 +43,7 @@ html
 
                                 div.news__bottom
                                     span.news__date 19/03/2020
-                                    button.button Подробнее
+                                    a.button(href="service-item.html") Подробнее
 
                     div.news-pages
                         a.news-pages__link.news-pages__link--active(href="#") 1
